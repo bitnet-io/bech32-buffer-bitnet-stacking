@@ -4,6 +4,7 @@ run from apache2 or python http server or npm serve
 
 ```
 git clone https://github.com/bitnet-io/bech32-buffer-bitnet-stacking
+cd bech32-buffer-bitnet-stacking
 npm -g install serve
 serve
 
