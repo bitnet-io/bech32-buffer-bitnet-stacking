@@ -1,7 +1,0 @@
-[ignore]
-.*/node_modules/.*
-^/test/.*
-^/lib/.*
-
-[options]
-exact_by_default=true

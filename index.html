@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Mirrored from slowli.github.io/bech32-buffer/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Jun 2024 04:45:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -81,9 +84,6 @@
 <body>
   <header class="body-header">
     <div class="content">
-      <h1>bech32-buffer</h1>
-      <p class="lead">Bech32 is a Bitcoin address format proposed by Pieter Wuille and Greg Maxwell in <a href="https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki">BIP 173</a> and later amended by <a href="https://github.com/bitcoin/bips/blob/master/bip-0350.mediawiki">BIP 350</a>.
-      Besides Bitcoin addresses, Bech32 can encode any short binary data.</p>
     </div>
   </header>
 
@@ -182,14 +182,14 @@
       <div class="float-none float-sm-end">
         <a href="https://github.com/slowli/bech32-buffer">GitHub</a>&nbsp;•
         <a href="https://npmjs.com/package/bech32-buffer">Npm</a>&nbsp;•
-        <a href="../dist/bech32-buffer.min.js" download="bech32-buffer.min.js">Browser version</a>
+        <a href="assets/js/bech32-buffer.min.js" download="bech32-buffer.min.js">Browser version</a>
       </div>
     </footer>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="qrcode.min.js"></script>
-  <script src="../dist/bech32-buffer.min.js"></script>
+  <script src="assets/js/qrcode.min.js"></script>
+  <script src="assets/js/bech32-buffer.min.js"></script>
 
   <script>
   /* eslint-env browser */
@@ -265,7 +265,7 @@
         if (!buffer) throw new TypeError('Invalid hex encoding of data');
 
         if (btc) {
-          const prefix = document.getElementById('btc-mainnet').checked ? 'bc' : 'tb';
+          const prefix = document.getElementById('btc-mainnet').checked ? 'bit' : 'tb';
           const version = parseInt(scriptVersion.value);
           const btcAddress = new bech32.BitcoinAddress(prefix, version, buffer);
           enc = btcAddress.encode();
@@ -297,7 +297,7 @@
           dec = bech32.BitcoinAddress.decode(encoded.value);
           scriptVersion.value = dec.scriptVersion;
 
-          const selectedNetwork = (dec.prefix === 'bc')
+          const selectedNetwork = (dec.prefix === 'bit')
             ? document.getElementById('btc-mainnet')
             : document.getElementById('btc-testnet');
           document.querySelector('input[name=btc-network-options]').parentElement.classList.remove('active');
@@ -350,4 +350,6 @@
   })();
   </script>
 </body>
+
+<!-- Mirrored from slowli.github.io/bech32-buffer/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Jun 2024 04:45:03 GMT -->
 </html>
